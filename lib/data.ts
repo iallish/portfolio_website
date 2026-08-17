@@ -107,9 +107,9 @@ export const experiences: Experience[] = [
     badgeColor: "tennesseeOrange",
     iconName: "school",
     description:
-      "Serving as a Graduate Teaching Assistant for STAT 201 (Introduction to Statistics / Business Analytics) within the Department of Business Analytics and Statistics. Facilitating statistical instruction, mentoring undergraduate students in quantitative problem-solving, and reinforcing core business analytics principles.",
+      "Serving as a Graduate Teaching Assistant for STAT 207 (Honors Introduction to Statistics / Business Analytics) within the Department of Business Analytics and Statistics. Facilitating statistical instruction, mentoring undergraduate students in quantitative problem-solving, and reinforcing core business analytics principles.",
     tags: [
-      "STAT 201",
+      "STAT 207",
       "Statistical Analysis",
       "Business Analytics",
       "Instruction",
@@ -257,7 +257,7 @@ export const projectsData: Project[] = [
 // ---------- Credentials & Affiliations ----------
 
 export const certifications: string[] = [
-  "STAT 201 Graduate Teaching Assistant",
+  "STAT 207 Graduate Teaching Assistant",
   "Haslam MSBA & AI ('27)",
   "Tickle Aerospace Engineering B.S. ('21)",
   "Tickle College Engineering Mentor (2019–2020)",
@@ -281,7 +281,7 @@ export const analyticsSkills: string[] = [
 
 export const analyticsSkillBars: SkillBar[] = [
   {
-    label: "STAT 201 Statistical Methods & Instruction",
+    label: "STAT 207 Honors Statistical Methods & Instruction",
     level: "Advanced",
     value: 95,
     color: "tennesseeOrange",

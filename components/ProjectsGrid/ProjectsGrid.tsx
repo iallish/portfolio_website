@@ -38,7 +38,7 @@ export default function ProjectsGrid() {
         <Stack gap="xl">
           <Group justify="space-between" align="flex-end">
             <div>
-              <Badge variant="light" color="indigo" size="md" radius="sm">
+              <Badge variant="light" color="tennesseeOrange" size="md" radius="sm">
                 Selected Work
               </Badge>
               <Title order={2} size="h2" mt="xs" fw={800}>

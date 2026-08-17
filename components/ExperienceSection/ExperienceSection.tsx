@@ -46,7 +46,7 @@ export default function ExperienceSection() {
       <Container size="xl">
         <Stack gap="xl">
           <div>
-            <Badge variant="light" color="indigo" size="md" radius="sm">
+            <Badge variant="light" color="tennesseeOrange" size="md" radius="sm">
               Career History
             </Badge>
             <Title order={2} size="h2" mt="xs" fw={800}>
