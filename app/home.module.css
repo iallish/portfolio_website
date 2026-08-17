@@ -1,0 +1,85 @@
+/* ============================================================
+   Home Page Styles
+   ============================================================ */
+
+/* Glass morphism card — shared surface treatment */
+.glassCard {
+  background-color: light-dark(rgba(255, 255, 255, 0.75), rgba(24, 24, 27, 0.65));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid light-dark(rgba(229, 231, 235, 0.8), rgba(255, 255, 255, 0.08));
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease;
+}
+
+.glassCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 30px -10px light-dark(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.4));
+}
+
+/* Hero section subtle ambient texture */
+.heroAmbient {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 500px;
+  background: radial-gradient(
+    ellipse,
+    light-dark(rgba(255, 130, 0, 0.06), rgba(255, 130, 0, 0.08)) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+/* Section anchor offset for sticky navbar */
+.sectionAnchor {
+  scroll-margin-top: 80px;
+}
+
+/* Avatar card container */
+.avatarCard {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+}
+
+.avatarImageWrap {
+  border-radius: calc(var(--mantine-radius-xl) - 6px);
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  position: relative;
+}
+
+/* Flex layout helpers (replacing Tailwind utils) */
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flexEnd {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 62em) {
+  .flexEnd {
+    justify-content: center;
+  }
+}
+
+/* Project / Experience card hover lift */
+.liftOnHover {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.liftOnHover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -8px light-dark(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.4));
+}

@@ -14,43 +14,54 @@ import {
   Title,
 } from "@mantine/core";
 import {
-  IconArrowLeft,
-  IconBrandGithub,
-  IconExternalLink,
   IconCode,
+  IconBrandGithub,
   IconBriefcase,
+  IconExternalLink,
 } from "@tabler/icons-react";
-import { projectsData } from "@/lib/data";
+import { projectsData, GITHUB_URL } from "@/lib/data";
+import { useScrollReveal } from "@/lib/useScrollReveal";
+import classes from "@/app/home.module.css";
 
-export default function ProjectsPage() {
+export default function ProjectsGrid() {
+  const revealRef = useScrollReveal();
+
   return (
-    <Box component="main" py={{ base: 40, md: 60 }} pb={100}>
+    <Box
+      id="projects"
+      ref={revealRef}
+      className={`${classes.sectionAnchor} fadeInUp`}
+      py={{ base: 40, md: 60 }}
+      style={{ position: "relative", zIndex: 10 }}
+    >
       <Container size="xl">
         <Stack gap="xl">
-          <Group justify="space-between" align="center">
+          <Group justify="space-between" align="flex-end">
+            <div>
+              <Badge variant="light" color="indigo" size="md" radius="sm">
+                Selected Work
+              </Badge>
+              <Title order={2} size="h2" mt="xs" fw={800}>
+                Featured Projects & Implementations
+              </Title>
+              <Text c="dimmed" size="md" mt="xs">
+                Production web applications, interactive portfolios, and
+                analytical optimization pipelines.
+              </Text>
+            </div>
             <Button
               component="a"
-              href="/"
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               variant="subtle"
-              color="tennesseeOrange"
-              leftSection={<IconArrowLeft size={18} />}
+              color="indigo"
+              rightSection={<IconExternalLink size={16} />}
+              visibleFrom="sm"
             >
-              Back to Home
+              GitHub Repositories
             </Button>
           </Group>
-
-          <div>
-            <Badge variant="light" color="tennesseeOrange" size="lg" radius="sm">
-              All Projects
-            </Badge>
-            <Title order={1} size="h1" mt="xs" fw={800}>
-              Featured Work & Projects
-            </Title>
-            <Text c="dimmed" size="lg" mt="xs" style={{ maxWidth: 640 }}>
-              An overview of client websites, full-stack applications, and
-              business analytics projects.
-            </Text>
-          </div>
 
           <SimpleGrid cols={{ base: 1, md: 2, lg: 3 }} spacing="lg">
             {projectsData.map((project, idx) => (
@@ -58,12 +69,11 @@ export default function ProjectsPage() {
                 key={idx}
                 padding="xl"
                 radius="md"
-                withBorder
+                className={`${classes.glassCard} ${classes.liftOnHover}`}
                 style={{
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
-                  transition: "transform 200ms ease, box-shadow 200ms ease",
                 }}
               >
                 <Stack gap="sm">
@@ -76,8 +86,12 @@ export default function ProjectsPage() {
                     >
                       <IconCode size={20} />
                     </ThemeIcon>
-                    <Badge variant="outline" color="indigo" size="sm">
-                      {project.category}
+                    <Badge
+                      variant="filled"
+                      color={project.featured ? "indigo" : "gray"}
+                      size="xs"
+                    >
+                      {project.highlight}
                     </Badge>
                   </Group>
 
@@ -89,13 +103,13 @@ export default function ProjectsPage() {
                     {project.description}
                   </Text>
 
-                  <Group gap={6} mt="sm">
+                  <Group gap={6} mt="xs">
                     {project.tags.map((tag) => (
                       <Badge
                         key={tag}
-                        variant="light"
+                        variant="outline"
                         color="gray"
-                        size="sm"
+                        size="xs"
                         radius="xs"
                         styles={{
                           root: { textTransform: "none", fontWeight: 500 },
@@ -112,8 +126,7 @@ export default function ProjectsPage() {
                   mt="xl"
                   pt="sm"
                   style={{
-                    borderTop:
-                      "1px solid var(--mantine-color-default-border)",
+                    borderTop: "1px solid var(--mantine-color-default-border)",
                   }}
                 >
                   {project.githubUrl && (
@@ -124,11 +137,11 @@ export default function ProjectsPage() {
                       rel="noopener noreferrer"
                       variant="light"
                       color="indigo"
-                      size="sm"
+                      size="xs"
                       radius="md"
                       leftSection={<IconBrandGithub size={16} />}
                     >
-                      Repository
+                      Source Code
                     </Button>
                   )}
                   {project.experienceUrl && (
@@ -137,7 +150,7 @@ export default function ProjectsPage() {
                       href={project.experienceUrl}
                       variant="light"
                       color="teal"
-                      size="sm"
+                      size="xs"
                       radius="md"
                       leftSection={<IconBriefcase size={16} />}
                     >
@@ -151,7 +164,7 @@ export default function ProjectsPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       variant="subtle"
-                      size="sm"
+                      size="xs"
                       radius="md"
                       rightSection={<IconExternalLink size={14} />}
                     >
@@ -159,7 +172,7 @@ export default function ProjectsPage() {
                     </Button>
                   )}
                   {project.codeNote && (
-                    <Badge variant="dot" color="gray" size="sm" radius="sm">
+                    <Badge color="tennesseeOrange" size="md" radius="md">
                       {project.codeNote}
                     </Badge>
                   )}
