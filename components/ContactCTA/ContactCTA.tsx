@@ -147,18 +147,6 @@ export default function ContactCTA() {
               >
                 GitHub
               </Button>
-              <Button
-                component="a"
-                href="https://trevanseay.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="subtle"
-                color="gray"
-                size="sm"
-                leftSection={<IconExternalLink size={18} />}
-              >
-                trevanseay.com
-              </Button>
             </Group>
           </Stack>
         </Paper>

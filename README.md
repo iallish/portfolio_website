@@ -19,3 +19,5 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## AI Use Disclosure
 
 In preparataion of this site, Claude Opus 4.6 Thinking was used to provide design suggestions and to migrate TailwindCSS to traditional CSS to better match Mantine UI's CSS based attributes.
+
+Utilized ChatGPT to create favicon.ico image.

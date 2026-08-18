@@ -89,7 +89,7 @@ export default function ExperienceSection() {
                             rel="noopener noreferrer"
                             size="sm"
                             fw={600}
-                            c="indigo.5"
+                            c="indigo"
                             underline="hover"
                             style={{
                               display: "inline-flex",
@@ -136,7 +136,7 @@ export default function ExperienceSection() {
                         <Badge
                           key={tag}
                           variant="light"
-                          color={exp.badgeColor}
+                          color="gray"
                           size="sm"
                           radius="sm"
                           styles={{

@@ -1,5 +1,5 @@
 // ============================================================
-// Portfolio Data — Single Source of Truth
+// Portfolio Data
 // ============================================================
 
 // ---------- Types ----------
@@ -58,7 +58,7 @@ export interface SkillBar {
 
 // ---------- Contact ----------
 
-export const EMAIL = "iallish@vols.utk.edu";
+export const EMAIL = "contact@ianallish.com";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/ian-allish";
 export const GITHUB_URL = "https://github.com/iallish";
 
@@ -157,7 +157,7 @@ export const experiences: Experience[] = [
     websiteUrl: "https://nanohelp.utk.edu/",
     location: "Tullahoma, TN",
     period: "June 2018 – Aug 2018",
-    badgeColor: "cyan",
+    badgeColor: "tennesseeOrange",
     iconName: "atom",
     description:
       "Collaborated with a multidisciplinary research team evaluating additive manufacturing constraints using experimental test data. Conducted comparative analysis of flow plate geometries (evaluating pressure drop, current density, and mass transport efficiency) and validated experimental datasets across prototype iterations.",
@@ -232,7 +232,7 @@ export const projectsData: Project[] = [
       "High-performance portfolio built with Next.js App Router, Mantine UI v9, and Tailwind CSS. Features seamless dark/light theme switching, custom tokens, and accessible responsive layouts.",
     tags: ["Next.js", "TypeScript", "Mantine UI", "CSS Modules", "React"],
     githubUrl: "https://github.com/iallish/portfolio_website",
-    liveUrl: "https://github.com/iallish/portfolio_website",
+    liveUrl: "https://ianallish.com",
     featured: true,
     highlight: "Custom Component Architecture",
     category: "Frontend",
@@ -267,36 +267,42 @@ export const certifications: string[] = [
 // ---------- Skills ----------
 
 export const analyticsSkills: string[] = [
-  "Business Analytics",
-  "Artificial Intelligence",
-  "Python",
+  "Python (Pandas / Pyomo)",
+  "R / R Shiny",
   "SQL",
-  "MATLAB",
+  "Tableau / Power BI",
+  "PyTorch",
+  "Predictive Modeling",
   "Statistical Inference",
-  "Quantitative Modeling",
   "Data Visualization",
-  "Root-Cause Telemetry",
-  "Microsoft Excel",
+  "Advanced Excel",
+  "MATLAB",
 ];
 
 export const analyticsSkillBars: SkillBar[] = [
   {
-    label: "STAT 207 Honors Statistical Methods & Instruction",
+    label: "Statistical Methods & Machine Learning",
     level: "Advanced",
     value: 95,
     color: "tennesseeOrange",
   },
   {
-    label: "Python & Data Modeling",
+    label: "Data Engineering & Pipeline Design",
     level: "Proficient",
     value: 88,
-    color: "indigo",
+    color: "tennesseeOrange",
   },
   {
-    label: "SQL Database Queries & Pipelines",
-    level: "Proficient",
-    value: 85,
-    color: "teal",
+    label: "Deep Learning (PyTorch) & Neural Networks",
+    level: "Developing",
+    value: 75,
+    color: "tennesseeOrange",
+  },
+  {
+    label: "Decision Optimization (Pyomo / LP)",
+    level: "Developing",
+    value: 70,
+    color: "tennesseeOrange",
   },
 ];
 
@@ -323,3 +329,4 @@ export const aerospaceSkills: string[] = [
   "Fluid Mechanics & Thermodynamics",
   "AIAA Member (2017-2023)",
 ];
+

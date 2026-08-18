@@ -73,7 +73,7 @@ export function ResumeModal({ opened, onClose }: ResumeModalProps) {
             <Tooltip label="Open PDF in a new tab" withArrow>
               <ActionIcon
                 component="a"
-                href="/MSBAResume.pdf"
+                href="/ResumeIanAllish.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="default"
@@ -86,7 +86,7 @@ export function ResumeModal({ opened, onClose }: ResumeModalProps) {
 
             <Button
               component="a"
-              href="/MSBAResume.pdf"
+              href="/ResumeIanAllish.pdf"
               download="Ian_Allish_Resume.pdf"
               variant="light"
               color="tennesseeOrange"
@@ -104,14 +104,14 @@ export function ResumeModal({ opened, onClose }: ResumeModalProps) {
             width: "100%",
             height: "75vh",
             minHeight: "500px",
-            backgroundColor: "light-dark(#f1f3f5, #141517)",
+            backgroundColor: "light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-8))",
             borderRadius: "var(--mantine-radius-md)",
             overflow: "hidden",
             border: "1px solid var(--mantine-color-default-border)",
           }}
         >
           <iframe
-            src="/MSBAResume.pdf#toolbar=1&navpanes=0&scrollbar=1"
+            src="/ResumeIanAllish.pdf#toolbar=1&navpanes=0&scrollbar=1"
             title="Ian Allish Resume PDF"
             width="100%"
             height="100%"

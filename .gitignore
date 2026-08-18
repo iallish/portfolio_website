@@ -40,7 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-#IanAllish.jpg
 AGENTS.md
-MSBAResume.pdf
-#/lib
+courses.md

@@ -44,7 +44,7 @@ export function SkillsTabs() {
         <Stack gap="xl">
           <div>
             <Badge variant="light" color="tennesseeOrange" size="md" radius="sm">
-              Interactive Capabilities
+              Skills & Expertise
             </Badge>
             <Title order={2} size="h2" mt="xs" fw={800}>
               Analytics, Engineering & Web Tooling
@@ -84,13 +84,14 @@ export function SkillsTabs() {
                   <Grid.Col span={{ base: 12, md: 6 }}>
                     <Stack gap="md">
                       <Title order={3} size="h4" fw={700}>
-                        Data-Driven Intelligence & Predictive Modeling
+                        Statistical Modeling, ML & Data Engineering
                       </Title>
                       <Text size="sm" c="dimmed" style={{ lineHeight: 1.6 }}>
-                        Leveraging statistical methodologies, Python, SQL data
-                        querying, and machine learning models to isolate
-                        variables, identify inefficiencies, and drive actionable
-                        decision systems.
+                        Building predictive models, data engineering pipelines,
+                        and deep learning systems across Python, R, SQL, and
+                        PyTorch. Coursework spans machine learning, decision
+                        optimization (Pyomo), interactive data storytelling (R
+                        Shiny), and probability-driven customer analytics.
                       </Text>
                       <Stack gap="sm" mt="xs">
                         {analyticsSkillBars.map((skill) => (
@@ -135,7 +136,7 @@ export function SkillsTabs() {
                           <Badge
                             key={skill}
                             variant="light"
-                            color="tennesseeOrange"
+                            color="gray"
                             size="md"
                             radius="sm"
                           >
@@ -199,7 +200,7 @@ export function SkillsTabs() {
                           <Badge
                             key={skill}
                             variant="light"
-                            color="indigo"
+                            color="gray"
                             size="md"
                             radius="sm"
                           >
@@ -271,7 +272,7 @@ export function SkillsTabs() {
                           <Badge
                             key={skill}
                             variant="light"
-                            color="teal"
+                            color="gray"
                             size="md"
                             radius="sm"
                           >

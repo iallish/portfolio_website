@@ -37,7 +37,11 @@ export function ThemeToggle() {
           transition: "transform 150ms ease, background-color 150ms ease",
         }}
       >
-        {isDark ? <IconSun size={20} color="#f59e0b" stroke={1.75} /> : <IconMoon size={20} color="#6366f1" stroke={1.75} />}
+        {isDark ? (
+          <IconSun size={20} color="var(--mantine-color-tennesseeOrange-5)" stroke={1.75} />
+        ) : (
+          <IconMoon size={20} color="var(--mantine-color-indigo-6)" stroke={1.75} />
+        )}
       </ActionIcon>
     </Tooltip>
   );

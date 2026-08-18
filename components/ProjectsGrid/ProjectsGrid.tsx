@@ -55,7 +55,7 @@ export default function ProjectsGrid() {
               target="_blank"
               rel="noopener noreferrer"
               variant="subtle"
-              color="indigo"
+              color="gray"
               rightSection={<IconExternalLink size={16} />}
               visibleFrom="sm"
             >
@@ -80,7 +80,7 @@ export default function ProjectsGrid() {
                   <Group justify="space-between" align="center">
                     <ThemeIcon
                       variant="light"
-                      color="indigo"
+                      color="tennesseeOrange"
                       size="lg"
                       radius="md"
                     >
@@ -88,7 +88,8 @@ export default function ProjectsGrid() {
                     </ThemeIcon>
                     <Badge
                       variant="filled"
-                      color={project.featured ? "indigo" : "gray"}
+                      color={project.featured ? "tennesseeOrange" : "gray"}
+                      c={project.featured ? undefined : "dark"}
                       size="xs"
                     >
                       {project.highlight}
@@ -149,7 +150,7 @@ export default function ProjectsGrid() {
                       component="a"
                       href={project.experienceUrl}
                       variant="light"
-                      color="teal"
+                      color="gray"
                       size="xs"
                       radius="md"
                       leftSection={<IconBriefcase size={16} />}

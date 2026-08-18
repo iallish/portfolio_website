@@ -86,7 +86,7 @@ export default function EducationGrid() {
                       rel="noopener noreferrer"
                       size="sm"
                       fw={600}
-                      c="indigo.5"
+                      c="indigo"
                       underline="hover"
                       style={{
                         display: "inline-flex",

@@ -31,15 +31,15 @@ export default function Hero() {
     useDisclosure(false);
 
   return (
-    <Box py={{ base: 40, md: 90 }} style={{ position: "relative", zIndex: 10 }}>
+    <Box py={{ base: 40, md: 70 }} style={{ position: "relative", zIndex: 10 }}>
       {/* Subtle ambient background */}
       <div className={classes.heroAmbient} />
 
       {/* Built-in Resume Viewer Modal */}
       <ResumeModal opened={resumeOpened} onClose={closeResume} />
 
-      <Container size="xl">
-        <Grid align="center" gap={{ base: "xl", md: 60 }}>
+      <Container size="lg">
+        <Grid align="center" gap={{ base: "xl", md: 32 }}>
           <Grid.Col span={{ base: 12, md: 7 }}>
             <Stack gap="lg">
               {/* Greeting */}
@@ -66,11 +66,12 @@ export default function Hero() {
                   mt="xs"
                   style={{ letterSpacing: "-0.015em" }}
                 >
-                  <Text component="span" c="tennesseeOrange.6" inherit>
+
+                  <Text component="span" c="tennesseeOrange" inherit>
                     Business Analytics & AI
                   </Text>
                   {" • "}
-                  <Text component="span" c="tennesseeOrange.4" inherit>
+                  <Text component="span" c="tennesseeOrange" inherit>
                     Aerospace Engineering
                   </Text>
                 </Title>
@@ -150,7 +151,7 @@ export default function Hero() {
 
           {/* Right: Avatar Card */}
           <Grid.Col span={{ base: 12, md: 5 }}>
-            <Box className={classes.flexEnd}>
+            <Box className={classes.flexCenter}>
               <Box className={classes.avatarCard}>
                 <Paper
                   radius="xl"
