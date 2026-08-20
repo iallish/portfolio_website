@@ -282,7 +282,13 @@ export const msbaiProjects: SchoolProject[] = [
     title: "BZAN 532: Communication and Storytelling with Data",
     description:
       "An interactive R Shiny dashboard analyzing hotel booking cancellations. It empowers hospitality managers to explore cancellation drivers, lead-time risks, pricing, and customer segments through dynamic filtering and visual analytics to optimize revenue.",
-    tags: ["Python", "SQL", "ETL Pipeline", "REST APIs", "GitHub Actions"],
+    tags: [
+      "R",
+      "R Shiny",
+      "Data Visualization",
+      "Exploratory Data Analysis (EDA)",
+      "dplyr",
+    ],
     highlight: "Summer 2026",
     iconName: "chartCovariate",
     courseUrl:
