@@ -44,9 +44,20 @@ export interface Project {
   githubUrl?: string;
   experienceUrl?: string;
   codeNote?: string;
+  iconName: string;
   featured: boolean;
   highlight: string;
-  category: string;
+}
+
+export interface SchoolProject {
+  title: string;
+  description: string;
+  tags: string[];
+  courseUrl?: string;
+  codeNote?: string;
+  liveUrl?: string;
+  iconName: string;
+  highlight: string;
 }
 
 export interface SkillBar {
@@ -99,7 +110,7 @@ export const metricsData: MetricItem[] = [
 
 export const experiences: Experience[] = [
   {
-    role: "Graduate Teaching Assistant (STAT 201)",
+    role: "Graduate Teaching Assistant (STAT 207)",
     organization: "University of Tennessee — Haslam College of Business",
     websiteUrl: "https://haslam.utk.edu/business-analytics-statistics/",
     location: "Knoxville, TN",
@@ -222,9 +233,9 @@ export const projectsData: Project[] = [
     tags: ["Next.js", "TypeScript", "Mantine UI", "React", "Cloudinary"],
     liveUrl: "https://trevanseay.com",
     codeNote: "Code available upon request",
+    iconName: "code",
     featured: true,
     highlight: "Production Client Website",
-    category: "Client / Production",
   },
   {
     title: "Personal Developer & Analytics Portfolio",
@@ -234,8 +245,8 @@ export const projectsData: Project[] = [
     githubUrl: "https://github.com/iallish/portfolio_website",
     liveUrl: "https://ianallish.com",
     featured: true,
+    iconName: "nextjs",
     highlight: "Custom Component Architecture",
-    category: "Frontend",
   },
   {
     title: "In-Person Diagnostic & Workflow Optimization",
@@ -249,8 +260,35 @@ export const projectsData: Project[] = [
     ],
     experienceUrl: "#experience",
     featured: false,
+    iconName: "briefcase",
     highlight: "60% Turnaround Gain",
-    category: "Operations / Systems",
+  },
+];
+
+// ---------- MSBAi Projects ----------
+export const msbaiProjects: SchoolProject[] = [
+  {
+    title: "BZAN 545: Data Engineering for Business",
+    description:
+      "An automated ETL pipeline that ingests daily retail sales, resolves product catalog migrations with fuzzy matching, and enriches data with Open- Meteo weather metrics in SQL to identify weather-sensitive inventory and optimize promotional strategies.",
+    tags: ["Python", "SQL", "ETL Pipeline", "REST APIs", "GitHub Actions"],
+    highlight: "Summer 2026",
+    iconName: "python",
+    courseUrl:
+      "https://catalog.utk.edu/preview_course_nopop.php?catoid=57&coid=377846&",
+    codeNote: "Code available upon request",
+  },
+  {
+    title: "BZAN 532: Communication and Storytelling with Data",
+    description:
+      "An interactive R Shiny dashboard analyzing hotel booking cancellations. It empowers hospitality managers to explore cancellation drivers, lead-time risks, pricing, and customer segments through dynamic filtering and visual analytics to optimize revenue.",
+    tags: ["Python", "SQL", "ETL Pipeline", "REST APIs", "GitHub Actions"],
+    highlight: "Summer 2026",
+    iconName: "chartCovariate",
+    courseUrl:
+      "http://catalog.utk.edu/preview_course_nopop.php?catoid=57&coid=391135&",
+    codeNote: "Code available upon request",
+    liveUrl: "https://iallishutk.shinyapps.io/BZAN_532_Final_Project/",
   },
 ];
 
@@ -271,6 +309,7 @@ export const analyticsSkills: string[] = [
   "R / R Shiny",
   "SQL",
   "Tableau / Power BI",
+  "TensorFlow",
   "PyTorch",
   "Predictive Modeling",
   "Statistical Inference",
@@ -329,4 +368,3 @@ export const aerospaceSkills: string[] = [
   "Fluid Mechanics & Thermodynamics",
   "AIAA Member (2017-2023)",
 ];
-
